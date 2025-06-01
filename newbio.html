@@ -69,6 +69,21 @@
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; /* spacing between images */
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .grid-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+  <style>
     .carousel {
       overflow: hidden;
       margin: auto;
@@ -132,6 +147,15 @@
     <p>Email: <a href="mailto:sarayu941@gmail.com">sarayu941@gmail.com</a></p>
     <p>YouTube: <a href="https://www.youtube.com/channel/@shreejas351" target="_blank">
       <i class="fab fa-youtube"></i> My YouTube Channel </a></p>
+  </section>
+
+  <section class="section images2x2">
+    <div class="grid-container">
+      <img src="images/dance1.jpg" alt="Image 1">
+      <img src="images/dance2.jpg" alt="Image 2">
+      <img src="images/dance3.jpg" alt="Image 3">
+      <img src="images/dance4.jpg" alt="Image 4">
+    </div>
   </section>
 
   <section class="section videos">
