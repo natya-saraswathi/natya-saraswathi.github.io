@@ -137,43 +137,41 @@
   <section class="section contact-info">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:sarayu941@gmail.com">sarayu941@gmail.com</a></p>
-    <p>YouTube: <a href="https://www.youtube.com/channel/@shreejas351" target="_blank">
-      <i class="fab fa-youtube"></i> My YouTube Channel </a></p>
   </section>
 
   <section class="section images">
     <h2>A selection of images from performances</h2>
     <div class="carousel">
-    <button class="arrow left" onclick="moveSlide(-1)">❮</button>
-    <div class="carousel-track" id="carouselTrack">
-      <img src="images/dance1.jpg" alt="1">
-      <img src="images/dance2.jpg" alt="2">
-      <img src="images/dance3.jpg" alt="3">
-      <img src="images/dance4.jpg" alt="4">
+      <button class="arrow left" onclick="moveSlide(-1)">❮</button>
+      <div class="carousel-track" id="carouselTrack">
+        <img src="images/dance1.jpg" alt="1">
+        <img src="images/dance2.jpg" alt="2">
+        <img src="images/dance3.jpg" alt="3">
+        <img src="images/dance4.jpg" alt="4">
+      </div>
+      <button class="arrow right" onclick="moveSlide(1)">❯</button>
     </div>
-    <button class="arrow right" onclick="moveSlide(1)">❯</button>
-  </div>
 
-  <script>
-    let currentIndex = 0;
-    const track = document.getElementById("carouselTrack");
-    const totalImages = document.querySelectorAll(".carousel-track img").length;
-    const imagesPerView = 2;
-    const imageWidth = 300;
-  
-    function moveSlide(direction) {
-      currentIndex += direction;
-  
-      // Loop back if out of range
-      if (currentIndex < 0) {
-        currentIndex = totalImages - imagesPerView;
-      } else if (currentIndex > totalImages - imagesPerView) {
-        currentIndex = 0;
+    <script>
+      let currentIndex = 0;
+      const track = document.getElementById("carouselTrack");
+      const totalImages = document.querySelectorAll(".carousel-track img").length;
+      const imagesPerView = 2;
+      const imageWidth = 300;
+    
+      function moveSlide(direction) {
+        currentIndex += direction;
+    
+        // Loop back if out of range
+        if (currentIndex < 0) {
+          currentIndex = totalImages - imagesPerView;
+        } else if (currentIndex > totalImages - imagesPerView) {
+          currentIndex = 0;
+        }
+    
+        track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
       }
-  
-      track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-    }
-  </script>
+    </script>
   </section>
 
   <footer>
